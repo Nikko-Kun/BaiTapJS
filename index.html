@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BaiTapHam</title>
+    <title>BaiTapJS2-3</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,13 +16,13 @@
 
     <div class="container">
         <div class="accordion" id="accordionExample">
- <!-- BÀI 1: QUẢN LÝ TUYỂN SINH -->
+ <!-- BÀI 1: TÍNH TIỀN LƯƠNG NHÂN VIÊN -->
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
                             data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            QUẢN LÝ TUYỂN SINH
+                            TÍNH TIỀN LƯƠNG NHÂN VIÊN
                         </button>
                     </h2>
                 </div>
@@ -33,50 +33,20 @@
                             <form class="w-75 py-1">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <label for="diemChuan">Điểm chuẩn</label>
-                                        <input type="number" class="form-control" id="diemChuan"
-                                            placeholder="Nhập điểm chuẩn" min='0' max="30">
-                                        <div class="invalid-feedback">Hãy nhập điểm chuẩn để tiếp tục</div>
+                
+                                        <input type="number" class="form-control" id="luong1Ngay" placeholder="Nhập lương 1 ngày"
+                                            min='0'>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="khuVuc">Khu vực ưu tiên</label>
-                                        <select id="khuVuc" class="form-control">
-                                            <option selected value=''>Chọn khu vực</option>
-                                            <option value='2'>A</option>
-                                            <option value='1'>B</option>
-                                            <option value='0.5'>C</option>
-                                        </select>
+                                     
+                                        <input type="number" class="form-control" id="soNgayLam" placeholder="Nhập số ngày làm"
+                                            min='0'>
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="doiTuong">Đối tượng ưu tiên</label>
-                                        <select id="doiTuong" class="form-control">
-                                            <option selected value=''>Chọn đối tượng</option>
-                                            <option value='2.5'>1</option>
-                                            <option value='1.5'>2</option>
-                                            <option value='1'>3</option>
-                                        </select>
-                                    </div>
+                                    
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="diem1">Điểm thi môn 1</label>
-                                        <input type="number" class="form-control" id="diem1" placeholder="Nhập điểm thi"
-                                            min='0' max='10'>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="diem2">Điểm thi môn 2</label>
-                                        <input type="number" class="form-control" id="diem2" placeholder="Nhập điểm thi"
-                                            min='0' max='10'>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="diem3">Điểm thi môn 3</label>
-                                        <input type="number" class="form-control" id="diem3" placeholder="Nhập điểm thi"
-                                            min='0' max='10'>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary" id="btnCalcPoint">Kết quả</button>
+                                <button type="button" class="btn btn-primary" id="btnCalc1">Tính lương</button>
                                 <div class="pt-3">
-                                    <p class="alert alert-danger" id="result"></p>
+                                    <p class="alert alert-danger" id="result1"></p>
                                 </div>
                             </form>
 
@@ -84,13 +54,13 @@
                     </div>
                 </div>
             </div>
-<!-- BÀI 2: TÍNH TIỀN ĐIỆN -->            
+<!-- BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH -->            
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            TÍNH TIỀN ĐIỆN
+                            TÍNH GIÁ TRỊ TRUNG BÌNH
                         </button>
                     </h2>
                 </div>
@@ -99,17 +69,29 @@
                         <div class="container">
                             <form class="w-75 py-1">
                                 <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="tenKH">Tên khách hàng</label>
-                                        <input type="text" class="form-control" id="tenKH" placeholder="Nhập họ tên">
+                                    
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu1" placeholder="Nhập số thứ 1"
+                                            min='0'>
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="soKw">Số Kw tiêu thụ</label>
-                                        <input type="number" class="form-control" id="soKw" placeholder="Nhập số Kw"
-                                            min="0">
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="soThu2" placeholder="Nhập số thứ 2"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu3" placeholder="Nhập số thứ 3"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="soThu4" placeholder="Nhập số thứ 4"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu5" placeholder="Nhập số thứ 5"
+                                            min='0'>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary" id="btnCalcPrice">Tính tiền điện</button>
+                                <button type="button" class="btn btn-primary" id="btnCalc2">Tính trung bình</button>
                                 <div class="pt-3">
                                     <p class="alert alert-danger" id="result2"></p>
                                 </div>
@@ -119,13 +101,13 @@
                     </div>
                 </div>
             </div>
-<!-- BÀI 3: TÍNH THUẾ THU NHẬP -->
+<!-- BÀI 3: QUY ĐỔI TIỀN -->
             <div class="card">
                 <div class="card-header" id="headingThree">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            TÍNH THUẾ THU NHẬP
+                            QUY ĐỔI TIỀN
                         </button>
                     </h2>
                 </div>
@@ -136,19 +118,12 @@
                             <form class="w-75 py-1">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <input type="text" class="form-control" id="tenNguoiNopThue"
-                                            placeholder="Nhập họ tên">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <input type="number" class="form-control" id="tongThuNhap"
-                                            placeholder="Tổng thu nhập năm" min="0">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <input type="number" class="form-control" id="soNguoiPhuThuoc"
-                                            placeholder="Số người phụ thuộc" min="0">
-                                    </div>
+                
+                                        <input type="number" class="form-control" id="tienUSD" placeholder="Nhập số tiền USD"
+                                            min='0'>
+                                    </div>                            
                                 </div>
-                                <button type="button" class="btn btn-primary" id="btnCalcTax">Tính tiền thuế</button>
+                                <button type="button" class="btn btn-primary" id="btnCalc3">Quy đổi tiền</button>
                                 <div class="pt-3">
                                     <p class="alert alert-danger" id="result3"></p>
                                 </div>
@@ -157,13 +132,13 @@
                     </div>
                 </div>
             </div>
-<!-- BÀI 4: TÍNH TIỀN CÁP -->            
+<!-- BÀI 4: TÍNH CHU VI, DIỆN TÍCH HÌNH CHỮ NHẬT -->            
             <div class="card">
                 <div class="card-header" id="headingFour">
                     <h2 class="mb-0">
                         <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            TÍNH TIỀN CÁP
+                            TÍNH CHU VI, DIỆN TÍCH HÌNH CHỮ NHẬT
                         </button>
                     </h2>
                 </div>
@@ -172,36 +147,52 @@
                         <div class="container">
                             <form class="w-75 py-1">
                                 <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <select id="loaiKH" class="form-control">
-                                            <option>Chọn loại khách hàng</option>
-                                            <option value='Nhà dân'>Nhà dân</option>
-                                            <option value='Doanh nghiệp'>Doanh nghiệp</option>
-                                        </select>
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="chieuDai" placeholder="Nhập chiều dài"
+                                            min='0'>
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <input type="text" class="form-control" id="maKhachHang"
-                                            placeholder="Nhập mã khách hàng">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <input type="number" class="form-control" id="soKenh"
-                                            placeholder="Số kênh cao cấp" min="0">
-                                    </div>
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="chieuRong" placeholder="Nhập chiều rộng"
+                                            min='0'>
+                                    </div>                                    
                                 </div>
-
-                                <div class="form-row">
-                                    <div class="form-group hienThiSoKetNoi col-md-4">
-                                        <input type="number" class="form-control" id="soKetNoi" placeholder="Số kết nối"
-                                            min="0">
-                                    </div>
-                                </div>
-
-                                <button type="button" class="btn btn-primary" id="btnCalcChannel">Tính tiền cáp</button>
+                                <button type="button" class="btn btn-primary" id="btnCalc4">Tính chu vi</button>
                                 <div class="pt-3">
                                     <p class="alert alert-danger" id="result4"></p>
                                 </div>
                             </form>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- BÀI 5: TÍNH TỔNG 2 KÝ SỐ -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            TÍNH TỔNG 2 KÝ SỐ
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card card-body">
+                        
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                
+                                        <input type="number" class="form-control" id="nhapSo2ChuSo" placeholder="Nhập số có 2 chữ số"
+                                            min='0'>
+                                    </div>                            
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc5">Tính tổng</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result5"></p>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -226,10 +217,12 @@
 
 
         <!-- JS Code -->
-        <script src="./js/tinhDiem.js"></script>
-        <script src="./js/tinhTienDien.js"></script>
-        <script src="./js/tinhTienThue.js"></script>
-        <script src="./js/tinhTienCap.js"></script>
+        <script src="./js/tinhLuong.js"></script>
+        <script src="./js/tinhGiaTriTrungBinh.js"></script>
+        <script src="./js/quyDoiTien.js"></script>
+        <script src="./js/tinhChuVi.js"></script>
+        <script src="./js/tong2KySo.js"></script>
+
 
 
 
